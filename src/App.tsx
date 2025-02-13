@@ -37,6 +37,8 @@ export function App() {
   // console.log(pokemonData);
 
   const handlePrevPage = async () => {
+    if (!prevURL) return;
+
     setLoading(true);
     let data = await getAllPokemon(prevURL);
     // console.log(data);
@@ -47,6 +49,8 @@ export function App() {
   };
 
   const handleNextPage = async () => {
+    if (!nextURL) return;
+
     setLoading(true);
     let data = await getAllPokemon(nextURL);
     // console.log(data);
