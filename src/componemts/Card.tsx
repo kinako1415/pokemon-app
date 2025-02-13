@@ -1,3 +1,5 @@
+import "./Card.css";
+
 const Card = ({ pokemon }) => {
   return (
     <div className="card">
@@ -6,7 +8,7 @@ const Card = ({ pokemon }) => {
       </div>
       <h3 className="cardName">{pokemon.name}</h3>
       <div className="cardTypes">
-        <div>
+        <div className="type">
           {pokemon.types.map((type) => {
             return (
               <div>
